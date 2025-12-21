@@ -448,6 +448,7 @@ nav {
 
 .tabs {
   border-top: 1px solid var(--border);
+  width: fit-content;
 }
 
 .tab-list {
