@@ -1,1 +1,1 @@
-## SJSU Robotics website
+## SJSU Robotics new updated website
