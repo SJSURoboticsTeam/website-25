@@ -84,7 +84,7 @@ function Footer() {
               </div>
               <div className="footer-contact-item">
                 <p className="contact-label">Meetings</p>
-                <p>Saturdays, 12–2pm</p>
+                <p>Saturdays, 1–3pm</p>
               </div>
               <div className="footer-contact-item">
                 <p className="contact-label">Location</p>
