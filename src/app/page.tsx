@@ -261,15 +261,15 @@ const divisions = [
 
 // Sponsors - logos in /public/sponsors/
 const sponsors = [
-  { name: "SJSU Engineering", logo: "/sponsors/SJSU-ENGR.png", url: "https://engineering.sjsu.edu" },
-  { name: "SJSU Associated Students", logo: "/sponsors/SJSU-AS.png", url: "https://as.sjsu.edu" },
-  { name: "Google", logo: "/sponsors/google.png", url: "https://google.com" },
-  { name: "Bergman Prototyping", logo: "/sponsors/bergman_prototyping.png", url: "https://bergmanprototyping.com" },
-  { name: "Hamamatsu", logo: "/sponsors/hamamatsu.png", url: "https://hamamatsu.com" },
-  { name: "Industrial Metal Supply", logo: "/sponsors/industrial-metal-supply.png", url: "https://industrialmetalsupply.com" },
-  { name: "Kammace", logo: "/sponsors/khalil.png", url: "https://kammace.com" },
-  { name: "Libhal", logo: "/sponsors/libhal.png", url: "https://libhal.github.io" },
-  { name: "xTool", logo: "/sponsors/xtool.png", url: "https://xtool.com" },
+  { name: "SJSU Engineering", logo: "/images/sponsors/SJSU-ENGR.png", url: "https://engineering.sjsu.edu" },
+  { name: "SJSU Associated Students", logo: "/images/sponsors/SJSU-AS.png", url: "https://as.sjsu.edu" },
+  { name: "Google", logo: "/images/sponsors/google.png", url: "https://google.com" },
+  { name: "Bergman Prototyping", logo: "/images/sponsors/bergman_prototyping.png", url: "https://bergmanprototyping.com" },
+  { name: "Hamamatsu", logo: "/images/sponsors/hamamatsu.png", url: "https://hamamatsu.com" },
+  { name: "Industrial Metal Supply", logo: "/images/sponsors/industrial-metal-supply.png", url: "https://industrialmetalsupply.com" },
+  { name: "Kammace", logo: "/images/sponsors/khalil.png", url: "https://kammace.com" },
+  { name: "Libhal", logo: "/images/sponsors/libhal.png", url: "https://libhal.github.io" },
+  { name: "xTool", logo: "/images/sponsors/xtool.png", url: "https://xtool.com" },
 ];
 
 const faqs = [
