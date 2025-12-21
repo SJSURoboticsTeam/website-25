@@ -1,21 +1,57 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Updates() {
   const [current, setCurrent] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+  const trackRef = useRef<HTMLDivElement>(null);
   const total = carouselImages.length;
 
+  // Auto-advance timer
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % total);
+      goToNext();
     }, 5000);
     return () => clearInterval(timer);
-  }, [total]);
+  }, [current]);
 
-  const goToSlide = (n: number) => {
-    setCurrent(((n % total) + total) % total);
+  const goToNext = () => {
+    setIsTransitioning(true);
+    setCurrent((prev) => prev + 1);
   };
+
+  const goToPrev = () => {
+    setIsTransitioning(true);
+    setCurrent((prev) => prev - 1);
+  };
+
+  // Handle seamless loop
+  useEffect(() => {
+    if (current === total) {
+      // At the cloned first slide - jump to real first
+      const timeout = setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrent(0);
+      }, 500);
+      return () => clearTimeout(timeout);
+    }
+    if (current === -1) {
+      // At the cloned last slide - jump to real last
+      const timeout = setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrent(total - 1);
+      }, 500);
+      return () => clearTimeout(timeout);
+    }
+  }, [current, total]);
+
+  // Extended slides: [clone of last, ...originals, clone of first]
+  const extendedSlides = [
+    carouselImages[total - 1],
+    ...carouselImages,
+    carouselImages[0],
+  ];
 
   return (
     <div className="page" style={{ paddingTop: "64px" }}>
@@ -35,15 +71,19 @@ export default function Updates() {
           <div className="carousel">
             <button
               className="carousel-arrow carousel-arrow-left"
-              onClick={() => goToSlide(current - 1)}
+              onClick={goToPrev}
             >
               &#8249;
             </button>
             <div
+              ref={trackRef}
               className="carousel-track"
-              style={{ transform: `translateX(-${current * 100}%)` }}
+              style={{
+                transform: `translateX(-${(current + 1) * 100}%)`,
+                transition: isTransitioning ? "transform 0.5s ease" : "none",
+              }}
             >
-              {carouselImages.map((img, i) => (
+              {extendedSlides.map((img, i) => (
                 <div key={i} className="carousel-slide">
                   <div className="carousel-image">
                     <img src={img.image} alt={img.caption} />
@@ -54,7 +94,7 @@ export default function Updates() {
             </div>
             <button
               className="carousel-arrow carousel-arrow-right"
-              onClick={() => goToSlide(current + 1)}
+              onClick={goToNext}
             >
               &#8250;
             </button>
