@@ -248,7 +248,7 @@ function EarthGlobe() {
   );
 }
 
-// Reordered: Mechanical first, Business last
+// Divisions
 const divisions = [
   { name: "Mechanical", body: "Designs chassis, arm, suspension, and drivetrain for rough terrain. Responsible for CAD, structural analysis, and manufacturing." },
   { name: "Electrical", body: "Power distribution, wiring harnesses, PCB design, sensors, and safety systems. Ensures reliable power delivery across all rover subsystems." },
@@ -287,7 +287,7 @@ const faqs = [
   },
   {
     q: "What competitions do you participate in?",
-    a: "Our primary focus is the University Rover Challenge (URC), held annually in the Utah desert.",
+    a: "Our primary focus for this year is the University Rover Challenge (URC), held annually in the Utah desert.",
   },
   {
     q: "How can sponsors support the team?",
