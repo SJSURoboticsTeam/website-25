@@ -25,8 +25,8 @@ export default function Home() {
         <div className="container">
           <div className="split">
             <div>
-              <p className="eyebrow">Competition</p>
-              <h2 className="section-title">University Rover Challenge</h2>
+              <p className="eyebrow">Upcoming Events</p>
+              <h2 className="section-title">University Rover Challenge 2026</h2>
               <p className="body-text mb-lg">
                 The URC is the world&apos;s premier robotics competition for university students.
                 Held annually in the Utah desert, teams design and build Mars rovers to complete
@@ -275,19 +275,23 @@ const sponsors = [
 const faqs = [
   {
     q: "What is SJSU Robotics?",
-    a: "A student-led, multi-disciplinary robotics team at San José State University focused on designing and building a Mars rover for the University Rover Challenge.",
+    a: "A student-led, multi-disciplinary robotics team at San José State University currently focused on designing and building a Mars rover for the University Rover Challenge. We have around 70 active members across 7 specialized divisions.",
+  },
+  {
+    q: "How do I join the team?",
+    a: "Attend one of our introductory meetings at the beginning of the Fall semester, introduce yourself, and we'll help you find a division that matches your interests. You can also join our Discord server to connect with current members and stay updated on projects.",
   },
   {
     q: "Do I need prior robotics experience to join?",
-    a: "No. We welcome students from any major and help you learn mechanical, electrical, software, and business skills on real rover projects.",
+    a: "No. We welcome students from any major and skill level. Our divisions offer hands-on learning opportunities in mechanical design, electronics, programming, science, and business operations.",
   },
   {
-    q: "How many members are on the team?",
-    a: "Around 70 active members across Mechanical, Electrical, Control Systems, Intelligent Systems, Mission Control, Business, and Science divisions.",
+    q: "What is the time commitment?",
+    a: "Most members attend weekly Saturday meetings and contribute a few additional hours per week. As competition season approaches, some divisions ramp up their schedules. We're flexible and understand students have busy academic lives.",
   },
   {
     q: "What competitions do you participate in?",
-    a: "Our primary focus for this year is the University Rover Challenge (URC), held annually in the Utah desert.",
+    a: "Our primary focus this year is the University Rover Challenge (URC), held annually in the Utah desert. Teams compete in tasks like autonomous navigation, equipment servicing, and science experiments simulating Mars exploration.",
   },
   {
     q: "How can sponsors support the team?",

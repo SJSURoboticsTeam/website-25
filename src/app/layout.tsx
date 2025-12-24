@@ -46,7 +46,7 @@ function Header() {
           <div className="nav-links">
             <Link href="/board" className="nav-link">Board</Link>
             <Link href="/updates" className="nav-link">Updates</Link>
-            <Link href="/#contact" className="nav-link">Contact</Link>
+            <Link href="/contact" className="nav-link">Contact</Link>
           </div>
           <button className="menu-toggle" aria-label="Toggle navigation">
             <span />
@@ -56,7 +56,7 @@ function Header() {
       <div className="mobile-menu">
         <Link href="/board">Board</Link>
         <Link href="/updates">Updates</Link>
-        <Link href="/#contact">Contact</Link>
+        <Link href="/contact">Contact</Link>
       </div>
     </header>
   );
@@ -64,7 +64,7 @@ function Header() {
 
 function Footer() {
   return (
-    <footer id="contact">
+    <footer>
       <div className="container">
         <div className="footer-split">
           {/* Left side - Logo and copyright */}
