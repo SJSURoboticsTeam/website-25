@@ -15,7 +15,7 @@ export default function Home() {
         <div className="hero-video-overlay" />
         <div className="hero-video-content container">
           <h1 className="hero-tagline">
-            Building the future of planetary exploration
+            An interdisciplinary group of studet engineers in the heart of Silicon Valley
           </h1>
         </div>
       </section>
