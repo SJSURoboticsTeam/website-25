@@ -99,32 +99,32 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 80px;
   position: relative;
 }
 
 .logo-link {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
 
 .logo-placeholder {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   border: 1px solid var(--border);
   background: var(--bg-elevated);
 }
 
 .logo-img {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
 }
 
 .logo {
   font-family: "Space Grotesk", system-ui, sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-weight: 600;
@@ -140,7 +140,7 @@ nav {
 }
 
 .nav-link {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--text-secondary);
@@ -194,7 +194,7 @@ nav {
 .mobile-menu {
   display: none;
   position: absolute;
-  top: 64px;
+  top: 80px;
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.95);
@@ -332,7 +332,8 @@ nav {
 .hero-video-content {
   position: relative;
   z-index: 2;
-  padding-top: 64px;
+  padding-top: 80px;
+  text-align: left;
 }
 
 .hero-tagline {
@@ -343,6 +344,34 @@ nav {
   margin: 0;
   letter-spacing: -0.02em;
   max-width: 14ch;
+}
+
+.hero-tagline-large {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  max-width: 16ch;
+}
+
+.discord-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.85rem 1.5rem;
+  background: #5865F2;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.discord-link:hover {
+  background: #4752C4;
+  transform: translateY(-2px);
+}
+
+.discord-link svg {
+  flex-shrink: 0;
 }
 
 /* ========================================
@@ -627,10 +656,22 @@ nav {
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
 }
 
 .sponsor-img-box:hover img {
-  opacity: 0.7;
+  opacity: 1;
+}
+
+.sponsor-img-box.dark-logo {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.sponsor-img-box.dark-logo img {
+  opacity: 1;
 }
 
 /* ========================================
@@ -799,6 +840,120 @@ nav {
 }
 
 .team-role {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Division Leadership Styles */
+.divisions-leadership {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+}
+
+.division-section {
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-xl);
+}
+
+.division-title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-lg);
+}
+
+.division-leads-grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .division-leads-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+}
+
+@media (min-width: 900px) {
+  .division-leads-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.past-leads-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.past-leads-link:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+/* Past Leads Page Styles */
+.past-year-section {
+  margin-bottom: var(--space-3xl);
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-xl);
+}
+
+.past-year-section:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.past-year-title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: var(--space-lg);
+}
+
+.past-leads-grid {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+@media (min-width: 640px) {
+  .past-leads-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .past-leads-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.past-lead-item {
+  padding: var(--space-md);
+  border: 1px solid var(--border);
+  transition: border-color 0.2s ease;
+}
+
+.past-lead-item:hover {
+  border-color: var(--border-light);
+}
+
+.past-lead-name {
+  font-size: 1rem;
+  margin-bottom: var(--space-xs);
+}
+
+.past-lead-role {
   font-size: 0.75rem;
   color: var(--text-muted);
   letter-spacing: 0.1em;

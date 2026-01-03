@@ -44,7 +44,7 @@ function Header() {
             <span className="logo">SJSU Robotics</span>
           </Link>
           <div className="nav-links">
-            <Link href="/board" className="nav-link">Board</Link>
+            <Link href="/board" className="nav-link">Leadership</Link>
             <Link href="/updates" className="nav-link">Updates</Link>
             <Link href="/contact" className="nav-link">Contact</Link>
           </div>
@@ -54,7 +54,7 @@ function Header() {
         </nav>
       </div>
       <div className="mobile-menu">
-        <Link href="/board">Board</Link>
+        <Link href="/board">Leadership</Link>
         <Link href="/updates">Updates</Link>
         <Link href="/contact">Contact</Link>
       </div>
