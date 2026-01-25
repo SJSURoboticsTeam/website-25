@@ -290,7 +290,7 @@ const faqs = [
   },
   {
     q: "How do I join the team?",
-    a: "Attend one of our introductory meetings at the beginning of the Fall semester, introduce yourself, and we'll help you find a division that matches your interests. You can also join our Discord server to connect with current members and stay updated on projects.",
+    a: "Attend one of our introductory meetings at the beginning of the Fall or Spring semesters, introduce yourself, and we'll help you find a division that matches your interests. You can also join our Discord server to connect with current members and stay updated on projects.",
   },
   {
     q: "Do I need prior robotics experience to join?",
