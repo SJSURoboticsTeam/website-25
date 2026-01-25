@@ -61,25 +61,33 @@ export default function Leadership() {
 }
 
 function TeamMember({ member, isCoLead = false }: { member: Member; isCoLead?: boolean }) {
+  const hasLinkedIn = member.linkedin && member.linkedin !== "#";
+
+  const content = (
+    <>
+      <div className="team-photo">
+        <Image
+          src={member.image}
+          alt={member.name}
+          width={200}
+          height={200}
+          style={{ objectFit: "cover" }}
+        />
+      </div>
+      <p className="team-name">{member.name}</p>
+      <p className="team-role">{isCoLead ? `Co-Lead: ${member.role}` : member.role}</p>
+    </>
+  );
+
   return (
     <div className="team-member">
-      <a
-        href={member.linkedin}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div className="team-photo">
-          <Image
-            src={member.image}
-            alt={member.name}
-            width={200}
-            height={200}
-            style={{ objectFit: "cover" }}
-          />
-        </div>
-        <p className="team-name">{member.name}</p>
-        <p className="team-role">{isCoLead ? `Co-Lead: ${member.role}` : member.role}</p>
-      </a>
+      {hasLinkedIn ? (
+        <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+          {content}
+        </a>
+      ) : (
+        <div>{content}</div>
+      )}
     </div>
   );
 }

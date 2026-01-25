@@ -1,3 +1,6 @@
+import Tabs from "@/components/Tabs";
+import FAQ from "@/components/FAQ";
+
 export default function Home() {
   return (
     <div className="page">
@@ -54,29 +57,7 @@ export default function Home() {
           <p className="body-text mb-xl">
             ~70 members across 7 specialized divisions. Every major is welcome.
           </p>
-          <div className="tabs mt-xl">
-            <div className="tab-list" role="tablist">
-              {divisions.map((div, i) => (
-                <button
-                  key={div.name}
-                  className={`tab-button ${i === 0 ? "active" : ""}`}
-                  role="tab"
-                  data-tab={i}
-                >
-                  {div.name}
-                </button>
-              ))}
-            </div>
-            {divisions.map((div, i) => (
-              <div
-                key={div.name}
-                className={`tab-content ${i === 0 ? "active" : ""}`}
-                data-tab-content={i}
-              >
-                {div.body}
-              </div>
-            ))}
-          </div>
+          <Tabs divisions={divisions} />
           <a
             href="https://discord.gg/M4ygrs33"
             target="_blank"
@@ -120,41 +101,12 @@ export default function Home() {
         <div className="container">
           <p className="eyebrow">FAQ</p>
           <h2 className="section-title">Common questions</h2>
-          <div className="mt-xl">
-            {faqs.map((faq, i) => (
-              <div key={i} className="faq-item">
-                <button className="faq-question" type="button">
-                  <span>{faq.q}</span>
-                  <span className="faq-icon">+</span>
-                </button>
-                <div className="faq-answer">
-                  <div className="faq-answer-inner">{faq.a}</div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <FAQ faqs={faqs} />
         </div>
       </section>
 
       {/* Earth Curve - directly above footer */}
       <div className="earth-curve" />
-
-      {/* Tab switching script */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            document.querySelectorAll('.tab-button').forEach(btn => {
-              btn.addEventListener('click', () => {
-                const tabId = btn.dataset.tab;
-                document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                btn.classList.add('active');
-                document.querySelector('[data-tab-content="' + tabId + '"]').classList.add('active');
-              });
-            });
-          `,
-        }}
-      />
     </div>
   );
 }

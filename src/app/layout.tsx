@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import MobileMenu from "@/components/MobileMenu";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -26,7 +27,6 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
-        <MobileMenuScript />
       </body>
     </html>
   );
@@ -39,8 +39,7 @@ function Header() {
       <div className="container">
         <nav>
           <Link href="/" className="logo-link">
-            {/* Logo placeholder - replace with: <img src="/logo.png" alt="" className="logo-img" /> */}
-              <img src="/images/transparent_logo.png" alt="SJSU Robotics" className="logo-img" />
+            <img src="/images/transparent_logo.png" alt="SJSU Robotics" className="logo-img" />
             <span className="logo">SJSU Robotics</span>
           </Link>
           <div className="nav-links">
@@ -48,15 +47,8 @@ function Header() {
             <Link href="/updates" className="nav-link">Updates</Link>
             <Link href="/contact" className="nav-link">Contact</Link>
           </div>
-          <button className="menu-toggle" aria-label="Toggle navigation">
-            <span />
-          </button>
+          <MobileMenu />
         </nav>
-      </div>
-      <div className="mobile-menu">
-        <Link href="/board">Leadership</Link>
-        <Link href="/updates">Updates</Link>
-        <Link href="/contact">Contact</Link>
       </div>
     </header>
   );
@@ -98,31 +90,3 @@ function Footer() {
   );
 }
 
-function MobileMenuScript() {
-  const script = `
-    (function() {
-      const toggle = document.querySelector('.menu-toggle');
-      const menu = document.querySelector('.mobile-menu');
-      if (toggle && menu) {
-        toggle.addEventListener('click', () => menu.classList.toggle('open'));
-        menu.querySelectorAll('a').forEach(a => {
-          a.addEventListener('click', () => menu.classList.remove('open'));
-        });
-      }
-
-      // FAQ toggle
-      document.querySelectorAll('.faq-item').forEach(item => {
-        const btn = item.querySelector('.faq-question');
-        if (btn) {
-          btn.addEventListener('click', () => {
-            document.querySelectorAll('.faq-item').forEach(other => {
-              if (other !== item) other.classList.remove('open');
-            });
-            item.classList.toggle('open');
-          });
-        }
-      });
-    })();
-  `;
-  return <script dangerouslySetInnerHTML={{ __html: script }} />;
-}
