@@ -101,51 +101,50 @@ interface Member {
 
 // Executive Board
 const executiveBoard: Member[] = [
-  { name: "Kirthika Ashokkumar", role: "President", linkedin: "https://www.linkedin.com/in/kirthika-ashokkumar-4233442b6/", image: "/images/leads/kirthika-ashokkumar.jpg" },
-  { name: "Ashley Hernandez", role: "Treasurer", linkedin: "https://www.linkedin.com/in/ashleyhernandezmora/", image: "/images/leads/ashley-hernandez.jpeg" },
+  { name: "Kirthika Ashokkumar", role: "President", linkedin: "https://www.linkedin.com/in/kirthika-ashokkumar-4233442b6/", image: "/images/leads/kirthika-ashokkumar.png" },
+  { name: "Ashley Marie Mercurio", role: "Vice President, Safety Officer, Science Lead, Business Lead", linkedin: "https://www.linkedin.com/in/ashleym-mercurio/", image: "/images/leads/ashley-marie-mercurio.png" },
+  { name: "Ashley Hernandez Mora", role: "Treasurer", linkedin: "https://www.linkedin.com/in/ashleyhernandezmora/", image: "/images/leads/ashley-hernandez-mora.png" },
+  { name: "Mukund Kunapareddy", role: "Co-Business Lead", linkedin: "#", image: "/images/leads/mukund-kunapareddy.png" },
 ];
 
 // Division leads organized by division
 const divisions = [
   {
-    name: "Science",
-    leads: [
-      { name: "Ashley Mercurio", role: "Science Lead, Safety Officer", linkedin: "https://www.linkedin.com/in/ashleym-mercurio/", image: "/images/leads/ashley-mercurio.jpeg" },
-    ],
-    coLeads: [] as Member[],
-  },
-  {
     name: "Mechanical",
     leads: [
-      { name: "Kate Oxley", role: "Mechanical Lead", linkedin: "https://www.linkedin.com/in/kate-oxley/", image: "/images/leads/kate-oxley.jpeg" },
+      { name: "Kate Oxley", role: "Mechanical Lead", linkedin: "https://www.linkedin.com/in/kate-oxley/", image: "/images/leads/kate-oxley.jpg" },
     ],
-    coLeads: [] as Member[],
+    coLeads: [
+      { name: "Diego Oliva", role: "Mechanical", linkedin: "#", image: "/images/leads/diego-oliva.png" },
+    ],
   },
   {
     name: "Electrical",
     leads: [
-      { name: "Shin Umeda", role: "Electrical Lead", linkedin: "https://www.linkedin.com/in/shin-umeda-39481024b/", image: "/images/leads/shin-umeda.jpeg" },
+      { name: "Shin Umeda", role: "Electrical Lead", linkedin: "https://www.linkedin.com/in/shin-umeda-39481024b/", image: "/images/leads/shin-umeda.png" },
     ],
-    coLeads: [] as Member[],
+    coLeads: [
+      { name: "Sara Berarducci", role: "Electrical", linkedin: "#", image: "/images/leads/sara-berarducci.png" },
+    ],
   },
   {
-    name: "Control Systems",
+    name: "Firmware",
     leads: [
-      { name: "Michael Kersey", role: "Control Systems Lead", linkedin: "https://www.linkedin.com/in/michael-kersey-ba89272a5/", image: "/images/leads/michael-kersey.jpeg" },
+      { name: "Michael Kersey", role: "Firmware Lead", linkedin: "https://www.linkedin.com/in/michael-kersey-ba89272a5/", image: "/images/leads/michael-kersey.png" },
     ],
     coLeads: [] as Member[],
   },
   {
     name: "Mission Control",
     leads: [
-      { name: "Nina Wang", role: "Mission Control Lead", linkedin: "https://www.linkedin.com/in/ninawang04/", image: "/images/leads/nina-wang.jpeg" },
+      { name: "Nina Wang", role: "Mission Control Lead", linkedin: "https://www.linkedin.com/in/ninawang04/", image: "/images/leads/nina-wang.png" },
     ],
     coLeads: [] as Member[],
   },
   {
     name: "Intelligent Systems",
     leads: [
-      { name: "Ahmad Kaddoura", role: "Intelligent Systems Lead", linkedin: "#", image: "/images/leads/ahmad-kaddoura.jpeg" },
+      { name: "Ahmad Kaddoura", role: "Intelligent Systems Lead", linkedin: "#", image: "/images/leads/ahmad-kaddoura.png" },
     ],
     coLeads: [] as Member[],
   },
