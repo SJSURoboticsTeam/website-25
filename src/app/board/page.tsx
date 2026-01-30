@@ -124,7 +124,7 @@ const divisions = [
       { name: "Shin Umeda", role: "Electrical Lead", linkedin: "https://www.linkedin.com/in/shin-umeda-39481024b/", image: "/images/leads/shin-umeda.png" },
     ],
     coLeads: [
-      { name: "Sara Berarducci", role: "Electrical", linkedin: "#", image: "/images/leads/default.png" },
+      { name: "Sara Berarducci", role: "Electrical", linkedin: "#", image: "/images/leads/sara-berarducci.png" },
     ],
   },
   {
