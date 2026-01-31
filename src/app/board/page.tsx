@@ -139,7 +139,9 @@ const divisions = [
     leads: [
       { name: "Nina Wang", role: "Mission Control Lead", linkedin: "https://www.linkedin.com/in/ninawang04/", image: "/images/leads/nina-wang.png" },
     ],
-    coLeads: [] as Member[],
+    coLeads: [
+      { name: "Braden Wagner", role: "Mission Control", linkedin: "#", image: "/images/leads/braden-wagner.jpg" },
+    ],
   },
   {
     name: "Intelligent Systems",

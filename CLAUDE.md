@@ -32,6 +32,7 @@ SJSU Robotics team website built with Next.js 14 (App Router).
 - Sara Berarducci - Electrical Co-Lead
 - Michael Kersey - Firmware Lead
 - Nina Wang - Mission Control Lead
+- Braden Wagner - Mission Control Co-Lead
 - Ahmad Kaddoura - Intelligent Systems Lead
 
 ## Old Website Repo
