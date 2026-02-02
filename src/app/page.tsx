@@ -59,7 +59,7 @@ export default function Home() {
           </p>
           <Tabs divisions={divisions} />
           <a
-            href="https://discord.gg/M4ygrs33"
+            href="https://discord.com/invite/upfMJazrKX"
             target="_blank"
             rel="noopener noreferrer"
             className="discord-link mt-xl"

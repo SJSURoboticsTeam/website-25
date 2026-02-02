@@ -53,7 +53,7 @@ export default function Contact() {
               </a>
 
               <a
-                href="https://discord.gg/dqN7t8Pm"
+                href="https://discord.com/invite/upfMJazrKX"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-social-card"
