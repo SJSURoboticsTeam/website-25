@@ -115,7 +115,7 @@ const divisions = [
       { name: "Kate Oxley", role: "Mechanical Lead", linkedin: "https://www.linkedin.com/in/kate-oxley/", image: "/images/leads/kate-oxley.jpg" },
     ],
     coLeads: [
-      { name: "Diego Oliva", role: "Mechanical", linkedin: "#", image: "/images/leads/diego-oliva.png" },
+      { name: "Diego Oliva", role: "Mechanical", linkedin: "https://www.linkedin.com/in/diego-r-oliva/", image: "/images/leads/diego-oliva.png" },
     ],
   },
   {
