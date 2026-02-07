@@ -104,7 +104,7 @@ const executiveBoard: Member[] = [
   { name: "Kirthika Ashokkumar", role: "President", linkedin: "https://www.linkedin.com/in/kirthika-ashokkumar-4233442b6/", image: "/images/leads/kirthika-ashokkumar.png" },
   { name: "Ashley Marie Mercurio", role: "Vice President, Safety Officer, Science Lead, Business Lead", linkedin: "https://www.linkedin.com/in/ashleym-mercurio/", image: "/images/leads/ashley-marie-mercurio.png" },
   { name: "Ashley Hernandez Mora", role: "Treasurer", linkedin: "https://www.linkedin.com/in/ashleyhernandezmora/", image: "/images/leads/ashley-hernandez-mora.png" },
-  { name: "Mukund Kunapareddy", role: "Co-Business Lead", linkedin: "#", image: "/images/leads/mukund-kunapareddy.png" },
+  { name: "Mukund Kunapareddy", role: "Co-Business Lead", linkedin: "https://www.linkedin.com/in/mukundlk/", image: "/images/leads/mukund-kunapareddy.png" },
 ];
 
 // Division leads organized by division
@@ -146,7 +146,7 @@ const divisions = [
   {
     name: "Intelligent Systems",
     leads: [
-      { name: "Ahmad Kaddoura", role: "Intelligent Systems Lead", linkedin: "#", image: "/images/leads/ahmad-kaddoura.png" },
+      { name: "Ahmad Kaddoura", role: "Intelligent Systems Lead", linkedin: "https://www.linkedin.com/in/ahmadkaddoura/", image: "/images/leads/ahmad-kaddoura.png" },
     ],
     coLeads: [] as Member[],
   },
