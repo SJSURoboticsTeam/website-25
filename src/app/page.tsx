@@ -29,7 +29,7 @@ export default function Home() {
           <div className="split">
             <div>
               <p className="eyebrow">Upcoming Events</p>
-              <h2 className="section-title">University Rover Challenge 2026</h2>
+              <h2 className="section-title">University Rover Challenge 2027</h2>
               <p className="body-text mb-lg">
                 The URC is the world&apos;s premier robotics competition for university students.
                 Held annually in the Utah desert, teams design and build Mars rovers to complete
