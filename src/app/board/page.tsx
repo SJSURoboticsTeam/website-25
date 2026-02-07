@@ -124,7 +124,7 @@ const divisions = [
       { name: "Shin Umeda", role: "Electrical Lead", linkedin: "https://www.linkedin.com/in/shin-umeda-39481024b/", image: "/images/leads/shin-umeda.png" },
     ],
     coLeads: [
-      { name: "Sara Berarducci", role: "Electrical", linkedin: "#", image: "/images/leads/sara-berarducci.png" },
+      { name: "Sara Berarducci", role: "Electrical", linkedin: "https://www.linkedin.com/in/sara-berarducci/", image: "/images/leads/sara-berarducci.png" },
     ],
   },
   {
@@ -140,7 +140,7 @@ const divisions = [
       { name: "Nina Wang", role: "Mission Control Lead", linkedin: "https://www.linkedin.com/in/ninawang04/", image: "/images/leads/nina-wang.png" },
     ],
     coLeads: [
-      { name: "Braden Wagner", role: "Mission Control", linkedin: "#", image: "/images/leads/braden-wagner.jpg" },
+      { name: "Braden Wagner", role: "Mission Control", linkedin: "https://www.linkedin.com/in/wagnerbraden/", image: "/images/leads/braden-wagner.jpg" },
     ],
   },
   {
