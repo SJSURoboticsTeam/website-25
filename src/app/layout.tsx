@@ -43,7 +43,7 @@ function Header() {
             <span className="logo">SJSU Robotics</span>
           </Link>
           <div className="nav-links">
-            <Link href="/board" className="nav-link">Leadership</Link>
+            <Link href="/" className="nav-link">Home</Link>
             <Link href="/updates" className="nav-link">Updates</Link>
             <Link href="/contact" className="nav-link">Contact</Link>
           </div>
@@ -76,7 +76,7 @@ function Footer() {
               </div>
               <div className="footer-contact-item">
                 <p className="contact-label">Meetings</p>
-                <p>Saturdays, 1–3pm</p>
+                <p>Saturdays, 1:30–3pm</p>
               </div>
               <div className="footer-contact-item">
                 <p className="contact-label">Location</p>

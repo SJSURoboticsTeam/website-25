@@ -1,5 +1,6 @@
 import Tabs from "@/components/Tabs";
 import FAQ from "@/components/FAQ";
+import Leadership from "@/components/Leadership";
 
 export default function Home() {
   return (
@@ -72,6 +73,14 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Leads Section */}
+      <section id="leads">
+        <div className="container" >
+          <p className="eyebrow">Leadership</p>
+          <Leadership />
+        </div>
+      </section>
+
       {/* Sponsors Section */}
       <section id="sponsors">
         <div className="container">
@@ -79,9 +88,8 @@ export default function Home() {
           <h2 className="section-title">Our sponsors</h2>
         </div>
         <div className="marquee-container mt-xl">
-          <div className="marquee-track">
-            {/* Duplicate sponsors for seamless loop */}
-            {[...sponsors, ...sponsors].map((sponsor, i) => (
+          <div className="flex flex1 flex-wrap flex-row justify-center" style={{maxWidth: '1200px', gap: '20px', margin: '0 auto'}}>
+            {sponsors.map((sponsor, i) => (
               <a
                 key={i}
                 href={sponsor.url}

@@ -19,7 +19,7 @@ export default function MobileMenu() {
         <span />
       </button>
       <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
-        <Link href="/board" onClick={closeMenu}>Leadership</Link>
+        <Link href="/" onClick={closeMenu}>Home</Link>
         <Link href="/updates" onClick={closeMenu}>Updates</Link>
         <Link href="/contact" onClick={closeMenu}>Contact</Link>
       </div>

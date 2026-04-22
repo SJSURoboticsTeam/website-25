@@ -3,32 +3,20 @@ import Link from "next/link";
 
 export default function Leadership() {
   return (
-    <div className="page" style={{ paddingTop: "80px" }}>
-      <section style={{ paddingBottom: "var(--space-md)" }}>
-        <div className="container">
-          <p className="eyebrow" style={{ marginBottom: "var(--space-xs)" }}>Our Team</p>
-          <h1 className="page-title">Leadership</h1>
-          <p className="body-text-large">
-            Meet the student leaders who guide SJSU Robotics.
-          </p>
+    <>
+      {/* Executive Leadership */}        
+      <>
+        <h2 className="section-title">Executive Board</h2>
+        <div className="team-grid mb-xl">
+          {executiveBoard.map((member, i) => (
+            <TeamMember key={i} member={member} />
+          ))}
         </div>
-      </section>
-
-      {/* Executive Leadership */}
-      <section style={{ paddingTop: 0 }}>
-        <div className="container">
-          <h2 className="section-title">Executive Board</h2>
-          <div className="team-grid mb-xl">
-            {executiveBoard.map((member, i) => (
-              <TeamMember key={i} member={member} />
-            ))}
-          </div>
-        </div>
-      </section>
+      </>
 
       {/* Division Leads */}
       <section style={{ paddingTop: 0 }}>
-        <div className="container">
+        <>
           <h2 className="section-title">Division Leads</h2>
           <div className="divisions-leadership">
             {divisions.map((division, i) => (
@@ -45,18 +33,18 @@ export default function Leadership() {
               </div>
             ))}
           </div>
-        </div>
+        </>
       </section>
 
       {/* Past Leads Link */}
       <section style={{ paddingTop: 0 }}>
-        <div className="container">
+        <>
           <Link href="/past-leads" className="past-leads-link">
             View Past Leadership →
           </Link>
-        </div>
+        </>
       </section>
-    </div>
+    </>
   );
 }
 
@@ -104,7 +92,7 @@ const executiveBoard: Member[] = [
   { name: "Kirthika Ashokkumar", role: "President", linkedin: "https://www.linkedin.com/in/kirthika-ashokkumar-4233442b6/", image: "/images/leads/kirthika-ashokkumar.png" },
   { name: "Ashley Marie Mercurio", role: "Vice President, Safety Officer, Science Lead, Business Lead", linkedin: "https://www.linkedin.com/in/ashleym-mercurio/", image: "/images/leads/ashley-marie-mercurio.png" },
   { name: "Ashley Hernandez Mora", role: "Treasurer", linkedin: "https://www.linkedin.com/in/ashleyhernandezmora/", image: "/images/leads/ashley-hernandez-mora.png" },
-  { name: "Mukund Kunapareddy", role: "Co-Business Lead", linkedin: "https://www.linkedin.com/in/mukundlk/", image: "/images/leads/mukund-kunapareddy.png" },
+
 ];
 
 // Division leads organized by division
@@ -148,6 +136,8 @@ const divisions = [
     leads: [
       { name: "Ahmad Kaddoura", role: "Intelligent Systems Lead", linkedin: "https://www.linkedin.com/in/ahmadkaddoura/", image: "/images/leads/ahmad-kaddoura.png" },
     ],
-    coLeads: [] as Member[],
+    coLeads: [
+      { name: "Aahil Shaikh", role: "Intelligent Systems", linkedin: "https://www.linkedin.com/in/aahilshaikh/", image: "/images/leads/aahil-shaikh.jpg" },
+    ],
   },
 ];

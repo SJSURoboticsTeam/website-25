@@ -10,8 +10,8 @@ export default function PastLeads() {
           <p className="body-text-large">
             Honoring the leaders who built SJSU Robotics.
           </p>
-          <Link href="/board" className="past-leads-link mt-lg" style={{ display: "inline-block" }}>
-            ← Current Leadership
+          <Link href="/" className="past-leads-link mt-lg" style={{ display: "inline-block" }}>
+            ← Homepage
           </Link>
         </div>
       </section>
