@@ -49,6 +49,7 @@ const pastLeads = [
       { name: "Shin Umeda", role: "Electrical Lead" },
       { name: "Viha Shah", role: "Control Systems Lead" },
       { name: "Evan Astle", role: "Mission Control Lead" },
+      { name: "Nina Wang", role: "Mission Control Lead" },
       { name: "Maaz Adil", role: "Intelligent Systems Lead" },
     ],
   },

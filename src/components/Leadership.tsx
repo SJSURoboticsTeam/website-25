@@ -90,8 +90,9 @@ interface Member {
 // Executive Board
 const executiveBoard: Member[] = [
   { name: "Kirthika Ashokkumar", role: "President", linkedin: "https://www.linkedin.com/in/kirthika-ashokkumar-4233442b6/", image: "/images/leads/kirthika-ashokkumar.png" },
-  { name: "Ashley Marie Mercurio", role: "Vice President, Safety Officer, Science Lead, Business Lead", linkedin: "https://www.linkedin.com/in/ashleym-mercurio/", image: "/images/leads/ashley-marie-mercurio.png" },
+  { name: "Ashley Marie Mercurio", role: "Vice President, Science Lead, Business Lead", linkedin: "https://www.linkedin.com/in/ashleym-mercurio/", image: "/images/leads/ashley-marie-mercurio.png" },
   { name: "Ashley Hernandez Mora", role: "Treasurer", linkedin: "https://www.linkedin.com/in/ashleyhernandezmora/", image: "/images/leads/ashley-hernandez-mora.png" },
+  { name: "Lainey Nguyen", role: "Safety Officer", linkedin: "https://www.linkedin.com/in/lainey-nguyen-22a641278/", image: "/images/leads/lainey-nguyen.jpeg" }
 
 ];
 
@@ -100,44 +101,38 @@ const divisions = [
   {
     name: "Mechanical",
     leads: [
-      { name: "Kate Oxley", role: "Mechanical Lead", linkedin: "https://www.linkedin.com/in/kate-oxley/", image: "/images/leads/kate-oxley.jpg" },
+      { name: "Kate Oxley", role: "Mechanical Lead", linkedin: "https://www.linkedin.com/in/kate-oxley/", image: "/images/leads/kate-oxley.jpg" }
     ],
     coLeads: [
-      { name: "Diego Oliva", role: "Mechanical", linkedin: "https://www.linkedin.com/in/diego-r-oliva/", image: "/images/leads/diego-oliva.png" },
+      { name: "Diego Oliva", role: "Mechanical", linkedin: "https://www.linkedin.com/in/diego-r-oliva/", image: "/images/leads/diego-oliva.png" }
     ],
   },
   {
     name: "Electrical",
     leads: [
-      { name: "Shin Umeda", role: "Electrical Lead", linkedin: "https://www.linkedin.com/in/shin-umeda-39481024b/", image: "/images/leads/shin-umeda.png" },
-    ],
-    coLeads: [
-      { name: "Sara Berarducci", role: "Electrical", linkedin: "https://www.linkedin.com/in/sara-berarducci/", image: "/images/leads/sara-berarducci.png" },
+      { name: "Sara Berarducci", role: "Electrical Lead", linkedin: "https://www.linkedin.com/in/sara-berarducci/", image: "/images/leads/sara-berarducci.png" }
     ],
   },
   {
     name: "Firmware",
     leads: [
-      { name: "Michael Kersey", role: "Firmware Lead", linkedin: "https://www.linkedin.com/in/michael-kersey-ba89272a5/", image: "/images/leads/michael-kersey.png" },
+      { name: "Michael Kersey", role: "Firmware Lead", linkedin: "https://www.linkedin.com/in/michael-kersey-ba89272a5/", image: "/images/leads/michael-kersey.png" }
     ],
-    coLeads: [] as Member[],
   },
   {
     name: "Mission Control",
     leads: [
-      { name: "Nina Wang", role: "Mission Control Lead", linkedin: "https://www.linkedin.com/in/ninawang04/", image: "/images/leads/nina-wang.png" },
-    ],
-    coLeads: [
-      { name: "Braden Wagner", role: "Mission Control", linkedin: "https://www.linkedin.com/in/wagnerbraden/", image: "/images/leads/braden-wagner.jpg" },
+      { name: "Braden Wagner", role: "Mission Control Lead", linkedin: "https://www.linkedin.com/in/wagnerbraden/", image: "/images/leads/braden-wagner.jpg" }
     ],
   },
   {
     name: "Intelligent Systems",
     leads: [
-      { name: "Ahmad Kaddoura", role: "Intelligent Systems Lead", linkedin: "https://www.linkedin.com/in/ahmadkaddoura/", image: "/images/leads/ahmad-kaddoura.png" },
+      { name: "Ahmad Kaddoura", role: "Intelligent Systems Lead", linkedin: "https://www.linkedin.com/in/ahmadkaddoura/", image: "/images/leads/ahmad-kaddoura.png" }
     ],
     coLeads: [
       { name: "Aahil Shaikh", role: "Intelligent Systems", linkedin: "https://www.linkedin.com/in/aahilshaikh/", image: "/images/leads/aahil-shaikh.jpg" },
+      { name: "Hemang Mahra", role: "Intelligent Systems", linkedin: "https://www.linkedin.com/in/hemang-mehra-408b70322/", image: "/images/leads/hemang-mehra.jpeg" }
     ],
   },
 ];
