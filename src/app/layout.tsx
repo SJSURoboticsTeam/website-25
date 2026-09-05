@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   description: "San José State University Robotics Club - Building Mars rovers in the heart of Silicon Valley",
 };
 
+// Set this to false to hide the recruiting announcement across the site.
+const SHOW_RECRUITING_ANNOUNCEMENT = true;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,6 +38,15 @@ export default function RootLayout({
 function Header() {
   return (
     <header>
+      {/* toggle on and off at top of file*/}
+      {SHOW_RECRUITING_ANNOUNCEMENT && (
+        <div className="announcement-bar" role="status">
+          <div className="announcement-inner">
+            <span>Fall 2026 Recruiting on September 19 </span>
+            <Link href="https://discord.com/invite/upfMJazrKX" className="announcement-link">JOIN THE DISCORD</Link>
+          </div>
+        </div>
+      )}
       <div className="header-fade" />
       <div className="container">
         <nav>

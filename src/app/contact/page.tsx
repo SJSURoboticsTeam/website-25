@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <div className="page" style={{ paddingTop: "64px" }}>
+    <div className="page" style={{ paddingTop: "104px" }}>
       <section style={{ paddingBottom: "var(--space-md)" }}>
         <div className="container">
           <p className="eyebrow">Get in Touch</p>

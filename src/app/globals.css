@@ -80,6 +80,36 @@ header {
   backdrop-filter: blur(12px);
 }
 
+.announcement-bar {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  background: var(--accent);
+  color: #000;
+}
+
+.announcement-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: 0 var(--space-lg);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.announcement-link {
+  border-bottom: 1px solid currentColor;
+  transition: opacity 0.2s ease;
+}
+
+.announcement-link:hover {
+  opacity: 0.65;
+}
+
 header .container {
   max-width: none;
   padding-left: 0;
@@ -220,6 +250,13 @@ nav {
 }
 
 @media (max-width: 768px) {
+  .announcement-inner {
+    gap: var(--space-sm);
+    padding: 0 var(--space-sm);
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+  }
+
   .nav-links {
     display: none;
   }
@@ -332,7 +369,7 @@ nav {
 .hero-video-content {
   position: relative;
   z-index: 2;
-  padding-top: 80px;
+  padding-top: 120px;
   text-align: left;
 }
 

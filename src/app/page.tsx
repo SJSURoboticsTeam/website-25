@@ -223,7 +223,7 @@ function EarthGlobe() {
 const divisions = [
   { name: "Mechanical", body: "Designs chassis, arm, suspension, and drivetrain for rough terrain. Responsible for CAD, structural analysis, and manufacturing." },
   { name: "Electrical", body: "Power distribution, wiring harnesses, PCB design, sensors, and safety systems. Ensures reliable power delivery across all rover subsystems." },
-  { name: "Controls", body: "Embedded software, motion control, actuators, and feedback loops. Bridges the gap between hardware and high-level software." },
+  { name: "Firmware", body: "Embedded software, motion control, actuators, and feedback loops. Bridges the gap between hardware and high-level software." },
   { name: "Autonomy", body: "Perception, SLAM, computer vision, and path planning. Enables the rover to navigate autonomously through unknown terrain." },
   { name: "Mission Control", body: "Operator interfaces, communications, telemetry, and field operations. The eyes and ears during competition runs." },
   { name: "Science", body: "Experiment design, sampling strategies, and data analysis. Searches for biosignatures in competition soil samples." },

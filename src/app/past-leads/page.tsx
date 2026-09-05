@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function PastLeads() {
   return (
-    <div className="page" style={{ paddingTop: "80px" }}>
+    <div className="page" style={{ paddingTop: "120px" }}>
       <section style={{ paddingBottom: "var(--space-md)" }}>
         <div className="container">
           <p className="eyebrow" style={{ marginBottom: "var(--space-xs)" }}>History</p>

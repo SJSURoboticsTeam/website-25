@@ -89,11 +89,10 @@ interface Member {
 
 // Executive Board
 const executiveBoard: Member[] = [
-  { name: "Kirthika Ashokkumar", role: "President", linkedin: "https://www.linkedin.com/in/kirthika-ashokkumar-4233442b6/", image: "/images/leads/kirthika-ashokkumar.png" },
-  { name: "Ashley Marie Mercurio", role: "Vice President, Science Lead, Business Lead", linkedin: "https://www.linkedin.com/in/ashleym-mercurio/", image: "/images/leads/ashley-marie-mercurio.png" },
-  { name: "Ashley Hernandez Mora", role: "Treasurer", linkedin: "https://www.linkedin.com/in/ashleyhernandezmora/", image: "/images/leads/ashley-hernandez-mora.png" },
+  { name: "Ashley Marie Mercurio", role: "President, Science Lead, Business Lead", linkedin: "https://www.linkedin.com/in/ashleym-mercurio/", image: "/images/leads/ashley-marie-mercurio.png" },
+  { name: "Kirthika Ashokkumar", role: "Chief Engineer", linkedin: "https://www.linkedin.com/in/kirthika-ashokkumar-4233442b6/", image: "/images/leads/kirthika-ashokkumar.png" },
+  { name: "Japji Kaur Batra", role: "Treasurer", linkedin: "https://www.linkedin.com/in/japji-kaur-batra/", image: "/images/leads/japji-batra.png" },
   { name: "Lainey Nguyen", role: "Safety Officer", linkedin: "https://www.linkedin.com/in/lainey-nguyen-22a641278/", image: "/images/leads/lainey-nguyen.jpeg" }
-
 ];
 
 // Division leads organized by division

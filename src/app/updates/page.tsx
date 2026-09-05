@@ -54,7 +54,7 @@ export default function Updates() {
   ];
 
   return (
-    <div className="page" style={{ paddingTop: "64px" }}>
+    <div className="page" style={{ paddingTop: "104px" }}>
       <section>
         <div className="container">
           <p className="eyebrow">News</p>
