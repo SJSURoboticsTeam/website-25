@@ -1,57 +1,91 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+declare global {
+  interface Window {
+    instgrm?: {
+      Embeds: {
+        process: () => void;
+      };
+    };
+  }
+}
+
+const carouselImages = [
+  { image: "/images/carousel/current-team-2025.png", caption: "SJSU Robotics Team 2025" },
+  { image: "/images/carousel/grads_rover.webp", caption: "Graduates with the rover" },
+  { image: "/images/carousel/halloween-25.png", caption: "Halloween 2025" },
+  { image: "/images/carousel/lockheed-martin-tour.jpg", caption: "Lockheed Martin facility tour" },
+  { image: "/images/carousel/talking-open-sauce.jpg", caption: "Presenting at Open Sauce" },
+  { image: "/images/carousel/toborlife-group-photo.jpeg", caption: "Toborlife tour" },
+];
+
+const INSTAGRAM_EMBED_SCRIPT_ID = "instagram-embed-script";
+const INSTAGRAM_EMBED_SCRIPT_URL = "https://www.instagram.com/embed.js";
 
 export default function Updates() {
   const [current, setCurrent] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(true);
-  const trackRef = useRef<HTMLDivElement>(null);
+  const [isInstagramReady, setIsInstagramReady] = useState(false);
+  const instagramEmbedRef = useRef<HTMLDivElement>(null);
   const total = carouselImages.length;
 
-  // Auto-advance timer
+  const goTo = (direction: 1 | -1) => {
+    setCurrent((previous) => (previous + direction + total) % total);
+  };
+
   useEffect(() => {
     const timer = setInterval(() => {
-      goToNext();
+      setCurrent((previous) => (previous + 1) % total);
     }, 5000);
     return () => clearInterval(timer);
-  }, [current]);
+  }, [total]);
 
-  const goToNext = () => {
-    setIsTransitioning(true);
-    setCurrent((prev) => prev + 1);
-  };
-
-  const goToPrev = () => {
-    setIsTransitioning(true);
-    setCurrent((prev) => prev - 1);
-  };
-
-  // Handle seamless loop
   useEffect(() => {
-    if (current === total) {
-      // At the cloned first slide - jump to real first
-      const timeout = setTimeout(() => {
-        setIsTransitioning(false);
-        setCurrent(0);
-      }, 500);
-      return () => clearTimeout(timeout);
-    }
-    if (current === -1) {
-      // At the cloned last slide - jump to real last
-      const timeout = setTimeout(() => {
-        setIsTransitioning(false);
-        setCurrent(total - 1);
-      }, 500);
-      return () => clearTimeout(timeout);
-    }
-  }, [current, total]);
+    const embed = instagramEmbedRef.current;
+    if (!embed) return;
 
-  // Extended slides: [clone of last, ...originals, clone of first]
-  const extendedSlides = [
-    carouselImages[total - 1],
-    ...carouselImages,
-    carouselImages[0],
-  ];
+    const observer = new MutationObserver(() => {
+      if (embed.querySelector("iframe")) {
+        setIsInstagramReady(true);
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(embed, { childList: true, subtree: true });
+
+    const processEmbeds = () => {
+      window.instgrm?.Embeds.process();
+
+      if (embed.querySelector("iframe")) {
+        setIsInstagramReady(true);
+        observer.disconnect();
+      }
+    };
+
+    const existingScript = document.getElementById(
+      INSTAGRAM_EMBED_SCRIPT_ID,
+    ) as HTMLScriptElement | null;
+    let script = existingScript;
+
+    if (window.instgrm) {
+      processEmbeds();
+    } else if (script) {
+      script.addEventListener("load", processEmbeds, { once: true });
+    } else {
+      script = document.createElement("script");
+      script.id = INSTAGRAM_EMBED_SCRIPT_ID;
+      script.src = INSTAGRAM_EMBED_SCRIPT_URL;
+      script.async = true;
+      script.addEventListener("load", processEmbeds, { once: true });
+      document.body.appendChild(script);
+    }
+
+    return () => {
+      observer.disconnect();
+      script?.removeEventListener("load", processEmbeds);
+    };
+  }, []);
 
   return (
     <div className="page" style={{ paddingTop: "104px" }}>
@@ -65,37 +99,53 @@ export default function Updates() {
         </div>
       </section>
 
-      {/* Image Carousel */}
+      <section className="instagram-section">
+        <div className="container">
+          <div
+            ref={instagramEmbedRef}
+            className={`instagram-embed${isInstagramReady ? " is-ready" : ""}`}
+            aria-busy={!isInstagramReady}
+          >
+            <blockquote
+              className="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/sjsurobotics/"
+              data-instgrm-version="14"
+            >
+              <a href="https://www.instagram.com/sjsurobotics/" target="_blank" rel="noreferrer">
+                View SJSU Robotics on Instagram
+              </a>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
       <section style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="carousel">
-            <button
-              className="carousel-arrow carousel-arrow-left"
-              onClick={goToPrev}
-            >
+            <button className="carousel-arrow carousel-arrow-left" onClick={() => goTo(-1)} aria-label="Previous update">
               &#8249;
             </button>
             <div
-              ref={trackRef}
               className="carousel-track"
               style={{
-                transform: `translateX(-${(current + 1) * 100}%)`,
-                transition: isTransitioning ? "transform 0.5s ease" : "none",
+                transform: `translate3d(-${current * 100}%, 0, 0)`,
               }}
             >
-              {extendedSlides.map((img, i) => (
-                <div key={i} className="carousel-slide">
+              {carouselImages.map((img) => (
+                <div key={img.image} className="carousel-slide">
                   <div className="carousel-image">
-                    <img src={img.image} alt={img.caption} />
+                    <img
+                      src={img.image}
+                      alt={img.caption}
+                      loading="eager"
+                      decoding="async"
+                    />
                   </div>
                   <p className="carousel-caption">{img.caption}</p>
                 </div>
               ))}
             </div>
-            <button
-              className="carousel-arrow carousel-arrow-right"
-              onClick={goToNext}
-            >
+            <button className="carousel-arrow carousel-arrow-right" onClick={() => goTo(1)} aria-label="Next update">
               &#8250;
             </button>
           </div>
@@ -104,13 +154,3 @@ export default function Updates() {
     </div>
   );
 }
-
-// Carousel images - add more by adding to this array
-const carouselImages = [
-  { image: "/images/carousel/current-team-2025.png", caption: "SJSU Robotics Team 2025" },
-  { image: "/images/carousel/grads_rover.webp", caption: "Graduates with the rover" },
-  { image: "/images/carousel/halloween-25.png", caption: "Halloween 2025" },
-  { image: "/images/carousel/lockheed-martin-tour.jpg", caption: "Lockheed Martin facility tour" },
-  { image: "/images/carousel/talking-open-sauce.jpg", caption: "Presenting at Open Sauce" },
-  { image: "/images/carousel/toborlife-group-photo.jpeg", caption: "Toborlife tour" },
-];

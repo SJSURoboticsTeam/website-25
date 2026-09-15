@@ -111,6 +111,9 @@ const divisions = [
     leads: [
       { name: "Sara Berarducci", role: "Electrical Lead", linkedin: "https://www.linkedin.com/in/sara-berarducci/", image: "/images/leads/sara-berarducci.png" }
     ],
+    coLeads : [
+      { name: "Raphael Lim", role: "Electrical", linkedin: "https://www.linkedin.com/in/raphael-lim-ee4753/", image: "/images/leads/raphael-lim.jpeg" }
+    ]
   },
   {
     name: "Firmware",
