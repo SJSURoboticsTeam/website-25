@@ -42,7 +42,7 @@ function Header() {
       {SHOW_RECRUITING_ANNOUNCEMENT && (
         <div className="announcement-bar" role="status">
           <div className="announcement-inner">
-            <span>Fall 2026 Recruiting on September 19 </span>
+            <span>Trial Projects are Underway- You can still join! </span>
             <Link href="https://discord.com/invite/upfMJazrKX" className="announcement-link">JOIN THE DISCORD</Link>
           </div>
         </div>
